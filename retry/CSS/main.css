@@ -107,10 +107,26 @@ body{
   background-color: #e5f5fc;
   height:100vh;
   width:100vw;
+  overflow-x: hidden;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
 }
 
 a{
-  color: #000;
+  text-decoration: none;
+}
+
+img{
+  display: block;
+}
+
+.inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /*  background_effect-BUBBLE */
@@ -122,6 +138,7 @@ a{
   border-radius:50%;
   background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
   box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4), inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+  z-index: 20;
 }
 .bubble:hover{
   display:none;
@@ -177,15 +194,181 @@ a{
   //100% {margin-left: 0px;}
 }
 
-
-
-
-header .header
-.inner{
+/* HEADER */
+header {
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
   width: 100%;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+
 }
 
-.unit_menu{
+header > .inner{
+  /* background-color: #aefff8; */
+  height: 215px;
+}
+
+header > .inner > .logo{
+  background-image: url("../IMG/logo_01.png");
+  width: 30%;
+  height: auto;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  
+}
+
+/* 서브 메뉴 */
+header .sub-menu{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+
+header .sub-menu .menu{
+  /* 매뉴 아이템(li)들을 수평 배치 */
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+header .sub-menu .menu li{
+  position: relative;
+}
+
+header .sub-menu .menu li a {
+  display: block; /* 상하 여백 적용을 위해 변경 */
+  padding: 11px 16px;/* 클릭할 수 있는 영역을 넓혀주는 효과 */
+  font-size: 16px;
+  color: #000000;
+}
+
+header .sub-menu .menu li a:hover{
+  color: #000;
+}
+
+
+/* 메뉴 아이템 사이 구분선 */
+header .sub-menu .menu li::after{
+  display: inline-block;
+  content:"";  /* 필수 속성 */
+  width: 1px;
+  height: 16px;
+  background-color: #656565;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu .menu li:first-child::after{
+  display: none;
+ }
+
+header .sub-menu .search{
+  position: relative;
+  height: 34px;
+}
+
+header .sub-menu .search input{
+  width: 36px;
+  height: 34px;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+
+/* input에 포커스 됬을 때 변화 */
+header .sub-menu .search input:focus{
+  width: 190px;
+  border-color: #5646df;
+}
+
+header .sub-menu .search .material-icons{  
+  height: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 7px;
+  margin: auto;
+  transition: opacity 0.4s;
+}
+
+header .sub-menu .search input:focus +  .material-icons{
+  opacity: 0;
+}
+
+
+/* 메인메뉴 */
+header .main-menu{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10; 
+}
+
+header .main-menu .item .item__name{
+  display: block; /* 상하 여백 적용을 위해 변경*/
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  width: auto;
+  font-size: 20px;
+  color: #070707;
+}
+
+header .main-menu .item:hover .item__name{
+  background-color: #87a9f3;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0; 
 
 }
+
+header .main-menu .item .item__contents{
+  background-color: #d7f0ec;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+
+header .main-menu .item:hover .item__contents{
+  display: block;
+
+}
+
+header .main-menu .item .item__contents > ul{
+  display: flex;
+  padding: 20px 0;
+}
+
+header .main-menu .item .item__contents > ul >li{
+  width: 220px;
+}
+
+header .main-menu .item .item__contents > ul >li  ul li{
+  padding: 5px 0;
+  font-size: 12px;
+  color: #000000;
+  cursor: pointer;
+}
+
+header .main-menu .item .item__contents > ul >li  ul li:hover{
+  color: #669900;
+}
+
+
+
+
+
+
