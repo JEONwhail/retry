@@ -309,7 +309,6 @@ header .sub-menu .search input:focus +  .material-icons{
   opacity: 0;
 }
 
-
 /* 메인메뉴 */
 header .main-menu{
   display: flex;
@@ -352,7 +351,6 @@ header .main-menu .item .item__contents{
 
 header .main-menu .item:hover .item__contents{
   display: block;
-
 }
 
 header .main-menu .item .item__contents > ul{
@@ -382,15 +380,15 @@ header .main-menu .item .item__contents > ul > li:hover a{
 
 
 #full{
-  margin-top: 300px;
   height: auto;
 }
 
 /* MAIN BANNER */
 .main_banner{
-  margin-top: 120px;
-  background-image: url("https://via.placeholder.com/1280x800");
+  margin-top: 156px;
+  background-image: url("https://via.placeholder.com/1280x600");
   background-position: center;
+  height: 600px;
 }
 
 
