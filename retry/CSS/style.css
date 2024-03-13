@@ -305,7 +305,7 @@ header .sub-menu .search .material-icons{
   transition: opacity 0.4s;
 }
 
-header .sub-menu .search input:focus +  .material-icons{
+header .sub-menu .search input:focus + .material-icons{
   opacity: 0;
 }
 
@@ -391,6 +391,28 @@ header .main-menu .item .item__contents > ul > li:hover a{
   height: 600px;
 }
 
+/* EVENT */
+
+.event{
+
+}
+
+.event h2{
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+}
+
+.event-box{
+  display: flex;
+  
+}
+
+.box-same{
+  height: 350px;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 /* FOOTER */

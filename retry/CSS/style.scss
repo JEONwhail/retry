@@ -1,0 +1,483 @@
+@font-face {
+  font-family: 'ImcreSoojin';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UhBeeSeulvely';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BRBA_B';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RixYeoljeongdo_Regular';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TmoneyRoundWindExtraBold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KOTRA_BOLD-Bold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic Bold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RixYeoljeongdo_Regular';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Binggrae-Bold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TmonMonsori';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JSDongkang-Regular';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff") format("woff");
+  font-weight: normal;
+  ont-style: normal;
+}
+
+@font-face {
+  font-family: 'JSDongkang-Bold';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-BoldA1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #f6fcff38;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*  background_effect-BUBBLE */
+
+.bubble {
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(144, 187, 252, 0.5) 0%, rgba(154, 162, 235, 0.493) 70%);
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4), inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+  z-index: 20;
+
+  &:hover {
+    display: none;
+  }
+}
+
+.b1 {
+  animation: floatup 10s linear infinite, sideways 5s ease-in-out infinite alternate;
+  left: 10%;
+  top: 100%;
+}
+
+.b2 {
+  animation: floatup 5s linear infinite, sideways 4s ease-in-out 1s infinite alternate;
+  left: 15%;
+  top: 30%;
+  transform: scale(0.7);
+}
+
+.b3 {
+  animation: floatup 4s linear infinite, sideways 6s ease-in-out 6s infinite alternate;
+  left: 20%;
+  transform: scale(1.2);
+}
+
+.b4 {
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 3s infinite alternate;
+  left: 25%;
+  top: 90%;
+  transform: scale(0.5);
+}
+
+.b5 {
+  animation: floatup 8s linear infinite, sideways 6s ease-in-out 3s infinite alternate;
+  left: 30%;
+  top: 30%;
+  transform: scale(1.1);
+}
+
+.b6 {
+  animation: floatup 7s linear infinite, sideways 4s ease-in-out 3.5s infinite alternate;
+  left: 40%;
+  top: 50%;
+  transform: scale(0.7);
+}
+
+.b7 {
+  animation: floatup 6s linear infinite, sideways 5s ease-in-out 4s infinite alternate;
+  left: 90%;
+  top: 90%;
+  transform: scale(0.6);
+}
+
+@keyframes floatup {
+  0% {
+    margin-top: 50%;
+  }
+
+  100% {
+    margin-top: -50%;
+  }
+}
+
+@keyframes sideways {
+  0% {
+    margin-left: 0em;
+  }
+
+  100% {
+    margin-left: 20em;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+/* HEADER */
+
+header {
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+
+  > .inner {
+    /* background-color: #aefff8; */
+    height: 155px;
+
+    > .logo {
+      width: 30%;
+      height: auto;
+      position: absolute;
+      height: auto;
+      top: -25px;
+      bottom: 0;
+      margin: auto 0;
+      left: -25px;
+
+      > img {
+        width: 250px;
+      }
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    display: flex;
+
+    .menu {
+      display: flex;
+      font-family: 'NEXON Lv1 Gothic OTF';
+
+      li {
+        position: relative;
+
+        a {
+          display: block;
+          padding: 11px 16px;
+          font-size: 16px;
+          color: #000000;
+
+          &:hover {
+            color: #0b0980;
+            font-weight: bold;
+          }
+        }
+
+        &::after {
+          display: inline-block;
+          content: "";
+
+          /* 필수 속성 */
+          width: 1px;
+          height: 16px;
+          background-color: #656565;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        &:first-child::after {
+          display: none;
+        }
+      }
+    }
+
+    .search {
+      position: relative;
+      height: 34px;
+
+      input {
+        width: 36px;
+        height: 34px;
+        padding: 20px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: #fff;
+        color: #777;
+        font-size: 12px;
+        transition: width 0.4s;
+
+        &:focus {
+          width: 190px;
+          border-color: #5646df;
+        }
+      }
+
+      .material-icons {
+        height: 15px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 7px;
+        margin: auto;
+        transition: opacity 0.4s;
+      }
+
+      input:focus + .material-icons {
+        opacity: 0;
+      }
+    }
+  }
+
+  .main-menu {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+
+    .item {
+      flex: 1;
+
+      .item__name {
+        display: block;
+        padding: 10px 20px;
+        font-family: 'NEXON Lv1 Gothic OTF';
+        width: auto;
+        font-size: 20px;
+        color: #070707;
+        text-align: center;
+      }
+
+      &:hover .item__name {
+        background-color: #87a9f3;
+        color: #000000;
+        font-weight: bold;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .item__contents {
+        background-color: #cce1ff;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        display: none;
+      }
+
+      &:hover .item__contents {
+        display: block;
+      }
+
+      .item__contents > ul {
+        display: flex;
+        padding: 20px 0;
+        flex-direction: row;
+
+        > li {
+          margin: 0 auto;
+          text-align: center;
+          width: 100%;
+
+          > a {
+            padding: 5px 0;
+            font-size: 20px;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #000000;
+            cursor: pointer;
+          }
+
+          &:hover a {
+            color: #000000;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 서브 메뉴 */
+
+/* 메뉴 아이템 사이 구분선 */
+
+/* 메인메뉴 */
+
+#full {
+  height: auto;
+}
+
+/* MAIN BANNER */
+
+.main_banner {
+  margin-top: 156px;
+  background-image: url("https://via.placeholder.com/1280x600");
+  background-position: center;
+  height: 600px;
+}
+
+/* EVENT */
+
+.event h2 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+}
+
+.event-box {
+  display: flex;
+}
+
+.box-same {
+  height: 350px;
+  flex: 1;
+}
+
+/* FOOTER */
+
+#footer {
+  width: 100%;
+  background-color: #f6f5f0;
+}
+
+.foot {
+  display: flex;
+  padding: 20px 0;
+}
+
+.left_place, .right_box {
+  width: 50%;
+}
+
+.left_place .foot_01 {
+  display: flex;
+
+  li {
+    flex-grow: 1;
+  }
+}
+
+.address {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.txt_ju {
+  font-size: 20px;
+}
+
+#footer .address p {
+  display: flex;
+  flex: 1;
+  font-size: 12px;
+  font-weight: bold;
+
+  &::after {
+    width: 2px;
+    height: 16px;
+    color: #000;
+    padding: 0 5px;
+  }
+}
