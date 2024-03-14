@@ -6,19 +6,37 @@
   <title>LAONHAJE RETRY</title>
 
   <link rel="stylesheet" href="./CSS/reset.css">
-  <link rel="stylesheet" href="./CSS/style.css">
-  <link rel="stylesheet" href="./CSS/style.scss">
-
-
-    <!-- 슬라이드 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-
-    <!-- 구글 머티리얼 아이콘 연결 -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined+filled" rel="stylesheet"> 
-
-  <script src="./JS/script.js"></script>
   
+  <!-- 슬라이드 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> 
+
+  <!-- CSS연결 -->
+  <link rel="stylesheet" href="./CSS/style.css">
+
+
+  <!-- 구글 머티리얼 아이콘 연결 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--  GSAP (애니메이션 링크) 순서주의!! -->
+  <!-- main.js에서 사용하므로 js 앞에다가 두기 -->
+  <!-- https://cdnjs.com/libraries/gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- ScrollToPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <!-- ScrollMagic  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- 스크립트 -->
+  <script defer src="./JS/script.js"></script>
+  <script defer src="./JS/youtub.js"></script>
+
+  <!-- 슬라이드js ->swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
   <!-- 장난꾸러기 낭낭 + 밝은 컬러 색상 컨택 -->
@@ -183,25 +201,102 @@
       <div class="you-tube">
         <a href="#none"><img src="https://via.placeholder.com/1100x350" alt=""></a>
       </div>
-
-  
     </section>
   
-    <!-- COMMU01 -->
-    <section class="commu01 inner">
+    <!-- NEWS -->
+    <section class="news inner">
+      <h2>LAON HAJE NEWS</h2>
+      <div class="contenst-news">
+
+        <div class="left">
+          <div class="left_box">
+            <img src="https://via.placeholder.com/500x350" alt="">
+          </div>
+        </div>
+  
+        <div class="right">
+          <div class="right_box">
+            <div class="top-news">
+              <img src="https://via.placeholder.com/250x150" alt="">
+              <img src="https://via.placeholder.com/250x150" alt="">
+            </div>
+            <div class="bottom-news">
+              <img src="https://via.placeholder.com/250x150" alt="">
+              <img src="https://via.placeholder.com/250x150" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
       
     </section>
   
-    <!-- COMMU02 -->
+    <!-- BOARD -->
     <!-- 팝업 추가 예정 -->
-    <section class="commu02 inner">
+    <section class="board inner">
+      <h2>LAON HAJE BOARD</h2>
+      <ul class="board-line">
+        <li>
+          <a href="#none">
+            <span>[게시판이름01]</span>
+            <h4>게시판제목</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#none">
+            <span>[게시판이름02]</span>
+            <h4>게시판제목</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#none">
+            <span>[게시판이름03]</span>
+            <h4>게시판제목</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#none">
+            <span>[게시판이름04]</span>
+            <h4>게시판제목</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
+          </a>
+        </li>
+      </ul>
       
     </section>
   
     <!-- Q&A -->
     <!-- 제이쿼리 또는 스크립트 사용으로 드롭다운 넣기 -->
     <section class="qna inner">
-      
+      <h2>LAON HAJE Q&A</h2>
+      <div class="qna_box">
+        <dl class="dl_box">
+          <dt class="question">Q. 선샘미.......</dt>
+          <dd class="answer">A. 진짜진짜 넘 모르겠고 어려워요</dd>
+
+          <dt class="question">Q. 선샘미.......</dt>
+          <dd class="answer">A. 하지만 해내야겠죠.....</dd>
+
+          <dt class="question">Q. 선샘미.......</dt>
+          <dd class="answer">A. 해낼 수 있으까요.....</dd>
+
+          <dt class="question">Q. 선샘미.......</dt>
+          <dd class="answer">A. 하지만 진짜 어떻게든 해내야겠죠.....</dd>
+
+          <dt class="question">Q. 선샘미.......</dt>
+          <dd class="answer">A. 도전....도전...저는 얼은이니까...능히 할 수 있습니다.....</dd>
+
+          <dt class="question">Q. 선샘미.......</dt>
+          <dd class="answer">A. 사실..능이버섯이라 잘 모르겠엉,용..,,.....</dd>
+
+        </dl>
+      </div>      
     </section>
   </section>
 
@@ -238,14 +333,13 @@
           <p>평일<span></span>09:00~18:00 (점심<span></span>12:30~13:30)
             <br>토요일<span></span>일요일<span></span>공휴일 휴무</p>
           </span>
-            <div class="sns_ic">
+            <!-- <div class="sns_ic">
               <a href="#none"><img src="https://img.godo.co.kr/godomall_v2/main/icon_sns_fb.png" alt="facebook"></a>
               <a href="#none"><img src="https://img.godo.co.kr/godomall_v2/main/icon_sns_insta.png" alt="insta"></a>
-            </div>
+            </div> -->
       </div>
     </div>
   </footer>
-
   
 </body>
 </html>
