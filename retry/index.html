@@ -1,372 +1,436 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LAONHAJE RETRY</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAONHAJE RETRY</title>
 
-  <link rel="stylesheet" href="./CSS/reset.css">
-  
-  <!-- 슬라이드 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> 
+    <link rel="stylesheet" href="./CSS/reset.css" />
 
-  <!-- CSS연결 -->
-  <link rel="stylesheet" href="./CSS/style.css">
-  <link rel="stylesheet" href="./CSS/slide.css">
+    <!-- 슬라이드 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
+    <!-- CSS연결 -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/slide.css" />
 
-  <!-- 구글 머티리얼 아이콘 연결 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 구글 머티리얼 아이콘 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--  GSAP (애니메이션 링크) 순서주의!! -->
-  <!-- main.js에서 사용하므로 js 앞에다가 두기 -->
-  <!-- https://cdnjs.com/libraries/gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--  GSAP (애니메이션 링크) 순서주의!! -->
+    <!-- main.js에서 사용하므로 js 앞에다가 두기 -->
+    <!-- https://cdnjs.com/libraries/gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- ScrollToPlugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ScrollToPlugin -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"
+      integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
+    <!-- ScrollMagic  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- ScrollMagic  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-  <!-- 스크립트 -->
-  <script defer src="./JS/script.js"></script>
-  <script defer src="./JS/youtub.js"></script>
-  <script defer src="./JS/slide.js"></script>
+    <!-- 슬라이드js ->swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-  <!-- 슬라이드js ->swiper -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- EVENT SLIDE -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- EVENT SLIDE -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
-<body>
-  <!-- 장난꾸러기 낭낭 + 밝은 컬러 색상 컨택 -->
-  <!-- 버블버블 느낌 (백그라운드 이미지에 == 이벤트 같은 페이지 백그라운드로 넣어버리기 auto XX 새로고침 했을때 뽈로로롱)낭낭 + 통통뛰는 느낌 애니메이션 컨택 -->
-  <!-- 네브 바 하버 드롭다운 각각 주기 -->
-  <!-- 네븝바 li a  하버시 볼드체 + 그림자 색상 넣기 -->
-  <!-- 서치바 트랜지션 애니메이션 -->
-  <!-- 헤더영역 -->
+    <!-- 스크립트 -->
+    <script defer src="./JS/script.js"></script>
+    <script defer src="./JS/youtub.js"></script>
+    <script defer src="./JS/slide.js"></script>
+  </head>
+  <body>
+    <!-- 장난꾸러기 낭낭 + 밝은 컬러 색상 컨택 -->
+    <!-- 버블버블 느낌 (백그라운드 이미지에 == 이벤트 같은 페이지 백그라운드로 넣어버리기 auto XX 새로고침 했을때 뽈로로롱)낭낭 + 통통뛰는 느낌 애니메이션 컨택 -->
+    <!-- 네브 바 하버 드롭다운 각각 주기 -->
+    <!-- 네븝바 li a  하버시 볼드체 + 그림자 색상 넣기 -->
+    <!-- 서치바 트랜지션 애니메이션 -->
+    <!-- 헤더영역 -->
 
-  <header>
-    <!-- .inner : 내용을 가운데 정렬하는 용도 -->
-    <div class="inner">
-      <a href="./index.html" class="logo">
-        <img src="./IMG/logo_01.png" alt="logo">
-      </a>
+    <header>
+      <!-- .inner : 내용을 가운데 정렬하는 용도 -->
+      <div class="inner">
+        <a href="./index.html" class="logo">
+          <img src="./IMG/logo_01.png" alt="logo" />
+        </a>
 
-      <!-- sub menu(header right top) -->
-      <div class="sub-menu">
-        <!-- menu item -->
-        <ul class="menu">
-          <li>
-            <a href="javascript:void(0)">로그인</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">회원가입</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">마이페이지</a>
-          </li>
-        </ul>
-        <!-- 검색영역 -->
-        <div class="search">
-          <input type="text">
-          <!-- <span class="material-icons">
+        <!-- sub menu(header right top) -->
+        <div class="sub-menu">
+          <!-- menu item -->
+          <ul class="menu">
+            <li>
+              <a href="javascript:void(0)">로그인</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">회원가입</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">마이페이지</a>
+            </li>
+          </ul>
+          <!-- 검색영역 -->
+          <div class="search">
+            <input type="text" />
+            <!-- <span class="material-icons">
             search
           </span> -->
-        </div>
-      </div>
-
-      <!-- main menu (header right bottom)-->
-      
-      <ul class="main-menu">
-        <li class="item">
-          <a href="javascript:void(0)" class="item__name">소개</a>
-          <div class="item__contents">
-            <ul class="inner">
-              <li><a href="javascript:void(0)">CI</a></li>
-              <li><a href="javascript:void(0)">회사소개</a></li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="item">
-          <a href="javascript:void(0)" class="item__name">컨텐츠</a>
-          <div class="item__contents">
-            <ul class="inner">
-              <!-- HOT DEAL강조해주기 -->
-              <li><a href="javascript:void(0)">HOT DEAL</a></li>
-              <li><a href="javascript:void(0)">FREE</a></li>
-              <li><a href="javascript:void(0)">GAME</a></li>
-              <li><a href="javascript:void(0)">MOVIE</a></li>
-              <li><a href="javascript:void(0)">TRAVEL</a></li>
-              <li><a href="javascript:void(0)">STUDY</a></li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="item">
-          <a href="javascript:void(0)" class="item__name">커뮤니티</a>
-          <div class="item__contents">
-            <ul class="inner">
-              <li><a href="javascript:void(0)">후기공유</a></li>
-              <li><a href="javascript:void(0)">컨텐츠 추천</a></li>
-              <li><a href="javascript:void(0)">직원들의 리액션</a></li>
-              <li><a href="javascript:void(0)">직원들의 추천템</a></li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="item">
-          <a href="javascript:void(0)" class="item__name">이벤트</a>
-          <div class="item__contents">
-            <ul class="inner">
-              <li><a href="javascript:void(0)">진행중 이벤트</a></li>
-              <li><a href="javascript:void(0)">당첨자 발표</a></li>
-              <li><a href="javascript:void(0)">종료된 이벤트</a></li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="item">
-          <a href="javascript:void(0)" class="item__name">마이페이지</a>
-          <div class="item__contents">
-            <ul class="inner">
-          <!-- 말을 좀 다듬어야 할듯 -->
-              <li><a href="javascript:void(0)">개인정보</a></li>
-              <li><a href="javascript:void(0)">나의 컨텐츠</a></li>
-              <li><a href="javascript:void(0)">응모한 이벤트</a></li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="item">
-          <a href="javascript:void(0)" class="item__name">고객센터</a>
-          <div class="item__contents">
-            <ul class="inner">
-              <li><a href="javascript:void(0)">자주하는 질문</a></li>
-                  <li><a href="javascript:void(0)">건의하기</a></li>
-                  <li><a href="javascript:void(0)">Q&A</a></li>
-                </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-
-  <!-- 컨텐츠 영역 -->
-
-  <!-- MAIN BANNER -->
-  <section id="full">
-    <div class="bubble-group">
-      <div class="bubble b1"></div>
-      <div class="bubble b2"></div>
-      <div class="bubble b3"></div>
-      <div class="bubble b4"></div>
-      <div class="bubble b5"></div>
-      <div class="bubble b6"></div>
-      <div class="bubble b7"></div>
-      
-    </div>
-    <section class="main_banner">
-      <!-- <img src="" alt=""> -->
-    </section>
-  
-    <!-- CONTENT -->
-    <section class="content">
-      <h2 class="inner">LAON HAJE CONTENT</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-  
-    <!-- YOUTUBE -->
-    <section class="youtube inner">
-      <h2>LAON HAJE YOUTUBE</h2>
-      <div class="you-tube">
-        <a href="#none"><img src="https://via.placeholder.com/1100x350" alt=""></a>
-      </div>
-    </section>
-  
-    <!-- NEWS -->
-    <section class="news inner">
-      <h2>LAON HAJE NEWS</h2>
-      <div class="contenst-news">
 
-        <div class="left">
-          <div class="left_box">
-            <img src="https://via.placeholder.com/500x350" alt="">
-          </div>
-        </div>
-  
-        <div class="right">
-          <div class="right_box">
-            <div class="top-news">
-              <img src="https://via.placeholder.com/250x150" alt="">
-              <img src="https://via.placeholder.com/250x150" alt="">
+        <!-- main menu (header right bottom)-->
+
+        <ul class="main-menu">
+          <li class="item">
+            <a href="javascript:void(0)" class="item__name">소개</a>
+            <div class="item__contents">
+              <ul class="inner">
+                <li><a href="javascript:void(0)">CI</a></li>
+                <li><a href="javascript:void(0)">회사소개</a></li>
+              </ul>
             </div>
-            <div class="bottom-news">
-              <img src="https://via.placeholder.com/250x150" alt="">
-              <img src="https://via.placeholder.com/250x150" alt="">
+          </li>
+
+          <li class="item">
+            <a href="javascript:void(0)" class="item__name">컨텐츠</a>
+            <div class="item__contents">
+              <ul class="inner">
+                <!-- HOT DEAL강조해주기 -->
+                <li><a href="javascript:void(0)">HOT DEAL</a></li>
+                <li><a href="javascript:void(0)">FREE</a></li>
+                <li><a href="javascript:void(0)">GAME</a></li>
+                <li><a href="javascript:void(0)">MOVIE</a></li>
+                <li><a href="javascript:void(0)">TRAVEL</a></li>
+                <li><a href="javascript:void(0)">STUDY</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="javascript:void(0)" class="item__name">커뮤니티</a>
+            <div class="item__contents">
+              <ul class="inner">
+                <li><a href="javascript:void(0)">후기공유</a></li>
+                <li><a href="javascript:void(0)">컨텐츠 추천</a></li>
+                <li><a href="javascript:void(0)">직원들의 리액션</a></li>
+                <li><a href="javascript:void(0)">직원들의 추천템</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="javascript:void(0)" class="item__name">이벤트</a>
+            <div class="item__contents">
+              <ul class="inner">
+                <li><a href="javascript:void(0)">진행중 이벤트</a></li>
+                <li><a href="javascript:void(0)">당첨자 발표</a></li>
+                <li><a href="javascript:void(0)">종료된 이벤트</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="javascript:void(0)" class="item__name">마이페이지</a>
+            <div class="item__contents">
+              <ul class="inner">
+                <!-- 말을 좀 다듬어야 할듯 -->
+                <li><a href="javascript:void(0)">개인정보</a></li>
+                <li><a href="javascript:void(0)">나의 컨텐츠</a></li>
+                <li><a href="javascript:void(0)">응모한 이벤트</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="item">
+            <a href="javascript:void(0)" class="item__name">고객센터</a>
+            <div class="item__contents">
+              <ul class="inner">
+                <li><a href="javascript:void(0)">자주하는 질문</a></li>
+                <li><a href="javascript:void(0)">건의하기</a></li>
+                <li><a href="javascript:void(0)">Q&A</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 컨텐츠 영역 -->
+
+    <!-- MAIN BANNER -->
+    <section id="full">
+      <div class="bubble-group">
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="bubble b4"></div>
+        <div class="bubble b5"></div>
+        <div class="bubble b6"></div>
+        <div class="bubble b7"></div>
+      </div>
+      <section class="main_banner">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <!-- <img src="" alt=""> -->
+      </section>
+
+      <!-- CONTENT -->
+      <section class="content inner">
+        <h2>LAON HAJE CONTENT</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
             </div>
           </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- YOUTUBE -->
+      <section class="youtube">
+        <h2 class="inner">LAON HAJE YOUTUBE</h2>
+        <div class="youtube__area">
+          <!-- 살제 영상이 재생될 요소 -->
+          <div id="player"></div>
         </div>
 
-      </div>
-      
+        <!-- 섹션 전체를 덮을 요소 -->
+        <div class="youtube__cover"></div>
+      </section>
+
+      <!-- NEWS -->
+      <section class="news inner">
+        <h2>LAON HAJE NEWS</h2>
+        <div class="contenst-news">
+          <div class="left">
+            <div class="left_box">
+              <img src="https://via.placeholder.com/500x350" alt="" />
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="right_box">
+              <div class="top-news">
+                <img src="https://via.placeholder.com/250x150" alt="" />
+                <img src="https://via.placeholder.com/250x150" alt="" />
+              </div>
+              <div class="bottom-news">
+                <img src="https://via.placeholder.com/250x150" alt="" />
+                <img src="https://via.placeholder.com/250x150" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOARD -->
+      <!-- 팝업 추가 예정 -->
+      <section class="board inner">
+        <h2>LAON HAJE BOARD</h2>
+        <ul class="board-line">
+          <li>
+            <a href="#none" class="defalt_board">
+              <span>[게시판이름01]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+            </a>
+            <div class="hidden_board h-01">
+              <span>[게시판이름01]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+              <a class="close_btn" href="#none"> 더보기 </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#none" class="defalt_board">
+              <span>[게시판이름02]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+            </a>
+            <div class="hidden_board h-02">
+              <span>[게시판이름02]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+              <a class="close_btn" href="#none"> 더보기 </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#none" class="defalt_board">
+              <span>[게시판이름03]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+            </a>
+            <div class="hidden_board h-03">
+              <span>[게시판이름03]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+              <a class="close_btn" href="#none"> 더보기 </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#none" class="defalt_board">
+              <span>[게시판이름04]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+            </a>
+            <div class="hidden_board h-04">
+              <span>[게시판이름04]</span>
+              <h4>게시판제목</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                commodi odit expedita sapiente rem, et at voluptate ipsa
+                recusandae, rerum, esse quod laboriosam nam fugit quidem
+                temporibus modi aperiam dolorum?
+              </p>
+              <a class="close_btn" href="#none"> 더보기 </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Q&A -->
+      <!-- 제이쿼리 또는 스크립트 사용으로 드롭다운 넣기 -->
+      <section class="qna inner">
+        <h2>LAON HAJE Q&A</h2>
+        <div class="qna_box">
+          <dl class="dl_box">
+            <dt class="question">Q. Question</dt>
+            <dd class="answer">A. Answer</dd>
+
+            <dt class="question">Q. Question</dt>
+            <dd class="answer">A. Answer</dd>
+
+            <dt class="question">Q. Question</dt>
+            <dd class="answer">A. Answer</dd>
+
+            <dt class="question">Q. Question</dt>
+            <dd class="answer">A. Answer</dd>
+
+            <dt class="question">Q. Question</dt>
+            <dd class="answer">A. Answer</dd>
+
+            <dt class="question">Q. Question</dt>
+            <dd class="answer">A. Answer</dd>
+          </dl>
+        </div>
+      </section>
     </section>
-  
-    <!-- BOARD -->
-    <!-- 팝업 추가 예정 -->
-    <section class="board inner">
-      <h2>LAON HAJE BOARD</h2>
-      <ul class="board-line">
-        <li>
-          <a href="#none" class="defalt_board">
-            <span>[게시판이름01]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-          </a>
-          <div class="hidden_board h-01">
-            <span>[게시판이름01]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-            <a class="close_btn" href="#none"> 닫기 </a>
-
-          </div>
-        </li>
-
-        <li>
-          <a href="#none" class="defalt_board">
-            <span>[게시판이름02]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-          </a>
-          <div class="hidden_board h-02">
-            <span>[게시판이름02]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-            <a class="close_btn" href="#none"> 닫기 </a>
-          </div>
-        </li>
-
-        <li>
-          <a href="#none" class="defalt_board">
-            <span>[게시판이름03]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-          </a>
-          <div class="hidden_board h-03">
-            <span>[게시판이름03]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-            <a class="close_btn" href="#none"> 닫기 </a>
-
-          </div>
-        </li>
-
-        <li>
-          <a href="#none" class="defalt_board">
-            <span>[게시판이름04]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-          </a>
-          <div class="hidden_board h-04">
-            <span>[게시판이름04]</span>
-            <h4>게시판제목</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi odit expedita sapiente rem, et at voluptate ipsa recusandae, rerum, esse quod laboriosam nam fugit quidem temporibus modi aperiam dolorum?</p>
-            <a class="close_btn" href="#none"> 닫기 </a>
-          </div>
-        </li>
-      </ul>
-      
-    </section>
-  
-    <!-- Q&A -->
-    <!-- 제이쿼리 또는 스크립트 사용으로 드롭다운 넣기 -->
-    <section class="qna inner">
-      <h2>LAON HAJE Q&A</h2>
-      <div class="qna_box">
-
-        <dl class="dl_box">
-          <dt class="question">Q. Question</dt>
-          <dd class="answer">A. Answer</dd>
-
-          <dt class="question">Q. Question</dt>
-          <dd class="answer">A. Answer</dd>
-
-          <dt class="question">Q. Question</dt>
-          <dd class="answer">A. Answer</dd>
-
-          <dt class="question">Q. Question</dt>
-          <dd class="answer">A. Answer</dd>
-
-          <dt class="question">Q. Question</dt>
-          <dd class="answer">A. Answer</dd>
-
-          <dt class="question">Q. Question</dt>
-          <dd class="answer">A. Answer</dd>
-
-        </dl>
-      </div>      
-    </section>
-  </section>
-  
 
     <!-- 푸터영역 -->
-  <footer id="footer">
-    <div class="foot inner">
-      <div class="left_place">
-        <ul class="foot_01">
+    <footer id="footer">
+      <div class="foot inner">
+        <div class="left_place">
+          <ul class="foot_01">
             <li><a href="#none">회사소개</a></li>
             <li><a href="#none">개인정보처리방침</a></li>
             <li><a href="#none">제휴문의</a></li>
             <li><a href="#none">사이트맵</a></li>
             <li><a href="#none">Q&A</a></li>
-        </ul>
-        <span class="txt_ju">(주)라온하제</span>
-        <div class="address">
-            <p>대표 : 김지연</p> 
-            <p>주소 : 인천광역시 계양구 계산역 3번출구</p> 
+          </ul>
+          <span class="txt_ju">(주)라온하제</span>
+          <div class="address">
+            <p>대표 : 김지연</p>
+            <p>주소 : 인천광역시 계양구 계산역 3번출구</p>
             <p>사업자등록번호 : 120-86-46911</p>
             <p>통신판매업신고 : 2024-인천계양-2024</p>
             <p>개인정보보호책임자 : 김지연</p>
@@ -374,25 +438,24 @@
             <p>팩스 : 02-8282-2828</p>
             <p>호스팅 제공 : dothome.kr</p>
             <p>Copyright ⓒ jy247.All Rights Reserved.</p>
+          </div>
         </div>
-      </div>
-  
-      <div class="right_box">
+
+        <div class="right_box">
           <span class="big">고객센터</span>
-          <span class="regul">1999-0113
-          <br>customer@laonhaje.com
-          <p>평일<span></span>09:00~18:00 (점심<span></span>12:30~13:30)
-            <br>토요일<span></span>일요일<span></span>공휴일 휴무</p>
+          <span class="regul"
+            >1999-0113 <br />customer@laonhaje.com
+            <p>
+              평일<span></span>09:00~18:00 (점심<span></span>12:30~13:30)
+              <br />토요일<span></span>일요일<span></span>공휴일 휴무
+            </p>
           </span>
-            <!-- <div class="sns_ic">
+          <!-- <div class="sns_ic">
               <a href="#none"><img src="https://img.godo.co.kr/godomall_v2/main/icon_sns_fb.png" alt="facebook"></a>
               <a href="#none"><img src="https://img.godo.co.kr/godomall_v2/main/icon_sns_insta.png" alt="insta"></a>
             </div> -->
+        </div>
       </div>
-    </div>
-  </footer>
-  
-</body>
+    </footer>
+  </body>
 </html>
-
-

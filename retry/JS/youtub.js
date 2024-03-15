@@ -1,12 +1,4 @@
-// iframe Player API를 비동기로 로드
-// 쓰는 이유?
-// <iframe> 태그만 써도 유튜브 영상 삽입이 가능한데 태그의 속성만으로 커스텀 하기에는 한계가 있음
-// api를 사용하면 다양한 명령으로 동영상 제어 가능
 
-//(참고)Iframe(Inline Frame) : HTML 문서 내에 다른 문서를 삽입하는데 사용
-
-
-// 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
