@@ -12,6 +12,7 @@
 
   <!-- CSS연결 -->
   <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/slide.css">
 
 
   <!-- 구글 머티리얼 아이콘 연결 -->
@@ -34,9 +35,13 @@
   <!-- 스크립트 -->
   <script defer src="./JS/script.js"></script>
   <script defer src="./JS/youtub.js"></script>
+  <script defer src="./JS/slide.js"></script>
 
   <!-- 슬라이드js ->swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- EVENT SLIDE -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
   <!-- 장난꾸러기 낭낭 + 밝은 컬러 색상 컨택 -->
@@ -178,20 +183,39 @@
     </section>
   
     <!-- EVENT -->
-    <section class="event inner">
-      <h2>LAON HAJE EVENT</h2>
-      <div class="event-box">
-        <div class="box-01 box-same">
-          <a href="#none"><img src="https://via.placeholder.com/350x350" alt=""></a>
+    <section class="event">
+      <h2 class="inner">LAON HAJE EVENT</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
         </div>
-
-        <div class="box-02 box-same">
-          <a href="#none"><img src="https://via.placeholder.com/350x350" alt=""></a>
-        </div>
-
-        <div class="box-03 box-same">
-          <a href="#none"><img src="https://via.placeholder.com/350x350" alt=""></a>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
   
