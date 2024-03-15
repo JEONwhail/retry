@@ -8,22 +8,19 @@
     <link rel="stylesheet" href="./CSS/reset.css" />
 
     <!-- 슬라이드 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     <!-- CSS연결 -->
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/slide.css" />
+    <link rel="stylesheet" href="./SCSS/style.scss">
 
     <!-- 구글 머티리얼 아이콘 연결 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined+filled" rel="stylesheet">  
+
 
     <!--  GSAP (애니메이션 링크) 순서주의!! -->
     <!-- main.js에서 사용하므로 js 앞에다가 두기 -->
@@ -51,9 +48,6 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- 슬라이드js ->swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
     <!-- EVENT SLIDE -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -70,7 +64,7 @@
     <!-- 서치바 트랜지션 애니메이션 -->
     <!-- 헤더영역 -->
 
-    <header>
+    <header id="header">
       <!-- .inner : 내용을 가운데 정렬하는 용도 -->
       <div class="inner">
         <a href="./index.html" class="logo">
@@ -94,9 +88,7 @@
           <!-- 검색영역 -->
           <div class="search">
             <input type="text" />
-            <!-- <span class="material-icons">
-            search
-          </span> -->
+            <span class="material-icons">search</span>
           </div>
         </div>
 
@@ -194,15 +186,15 @@
         <!-- Swiper -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide"><img src="./IMG/Slide01.png" alt="slide_img01"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide02.png" alt="slide_img02"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide03.png" alt="slide_img03"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide04.png" alt="slide_img04"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide05.png" alt="slide_img05"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide06.png" alt="slide_img06"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide07.png" alt="slide_img07"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide08.png" alt="slide_img08"></div>
+            <div class="swiper-slide"><img src="./IMG/Slide09.png" alt="slide_img09"></div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -216,31 +208,31 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              <img src="./IMG/content01.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              <img src="./IMG/content02.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              <img src="./IMG/content03.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              <img src="./IMG/content04.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+              <img src="./IMG/content05.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+              <img src="./IMG/content06.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+              <img src="./IMG/content07.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+              <img src="./IMG/content08.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+              <img src="./IMG/content09.jpg" />
             </div>
           </div>
 
