@@ -480,7 +480,6 @@ header .main-menu .item .item__contents > ul > li:hover a{
 }
 
 /* BOARD */
-
 .board{
 
 }
@@ -494,7 +493,6 @@ header .main-menu .item .item__contents > ul > li:hover a{
 .board .board-line{
   display: flex;
   justify-content: space-between;
-
 }
 
 .board .board-line > li{
@@ -505,14 +503,14 @@ header .main-menu .item .item__contents > ul > li:hover a{
   box-sizing: border-box;
 }
 
-.board .board-line > li > a{
+.board .board-line > li > .defalt_board{
   height: auto;
   padding-bottom: 30px;
   display: block;
   width: 100%;
 }
 
-.board .board-line > li > a > span{
+.board .board-line li span{
   font-size: 15px;
   color: #4d7fca;
   text-align: left;
@@ -523,7 +521,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
   font-family: 'JSDongkang-Bold';
 }
 
-.board .board-line > li > a > h4{
+.board .board-line li h4{
   font-size: 16px;
   color: #000;
   text-align: left;
@@ -532,7 +530,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
   font-family: 'JSDongkang-Bold';
 }
 
-.board .board-line > li > a > p{
+.board .board-line li  p{
   text-align: left;
   display: block;
   line-height: 28px;
@@ -541,6 +539,56 @@ header .main-menu .item .item__contents > ul > li:hover a{
   font-size: 15px;
   font-family: 'JSDongkang-Regular';
 }
+
+
+.board .board-line > li .hidden_board{
+  width: 15%;
+  height: 35%;
+  background-color: #e0e0e0;
+  position: absolute;
+  border: 1px solid #1111b3;
+  box-sizing: border-box;
+  display: none;
+  z-index: 10;
+}
+
+.board .board-line > li .hidden_board.h-01{
+  top: calc(55% - 250px);
+  left: calc(35% - 250px);
+}
+
+.board .board-line > li .hidden_board.h-02{
+  top: calc(55% - 250px);
+  left: calc(51% - 250px);
+}
+
+.board .board-line > li .hidden_board.h-03{
+  top: calc(55% - 250px);
+  left: calc(67% - 250px);
+}
+
+.board .board-line > li .hidden_board.h-04{
+  top: calc(55% - 250px);
+  left: calc(83% - 250px);
+}
+
+.board .board-line > li .hidden_board .close_btn{
+  display: block;
+  color: #000;
+  font-family: 'JSDongkang-Regular';
+  margin-top: 30px;
+  right: 15px;
+  position: absolute;
+}
+
+
+.board .board-line > li .hidden_board{
+  width: 280px;
+  height: 360px;
+  
+}
+
+
 
 
 /* Q&A */
