@@ -476,8 +476,21 @@ header .main-menu .item .item__contents > ul > li:hover a{
 }
 
 .news .contenst-news .left .left_box{
+  width: 90%;
+}
+
+.news .contenst-news .left .left_box .main_news_box{
+  width: 100%;
+}
+
+.news .contenst-news .left .left_box .main_news_box a{
+  color: #000;
+}
+
+.news .contenst-news .left .left_box .main_news_box .btn{
   
 }
+
 
 .news .contenst-news .left .left_box > img{
   
