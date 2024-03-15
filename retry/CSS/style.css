@@ -393,25 +393,19 @@ header .main-menu .item .item__contents > ul > li:hover a{
 
 
 
-/* EVENT */
-.event{
+/* CONTENT */
+.content{
+  background-color: #000;
 
 }
 
-.event h2{
+.content h2{
   text-align: left;
   padding: 30px 0;
   font-size: 30px;
+  color: #fff;
 }
 
-.event-box{
-  display: flex;
-  justify-content: space-between;  
-}
-
-.box-same{
-  height: 350px;
-}
 
 
 
