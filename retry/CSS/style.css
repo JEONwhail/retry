@@ -629,13 +629,8 @@ header .main-menu .item .item__contents > ul > li:hover a{
   
 }
 
-
-
-
 /* Q&A */
-.qna{
-
-}
+.qna{}
 
 .qna h2{
   text-align: left;
@@ -643,14 +638,9 @@ header .main-menu .item .item__contents > ul > li:hover a{
   font-size: 30px;
 }
 
-.qna .qna_box{
-  
-}
+.qna .qna_box{}
 
-.qna .qna_box .dl_box{
-
-}
-
+.qna .qna_box .dl_box{}
 
 .qna .qna_box .dl_box .question{
   line-height: 50px;
@@ -705,11 +695,24 @@ padding: 20px 0;
   flex-grow: 1;
 }
 
+.left_place .footer_left .same_ft{
+  display: flex;
+  font-size: 11px;
+  width: 100%;
+  
+}
+
+.left_place .footer_left .same_ft p::after{
+  content: "";
+  padding-right: 10px;
+}
+
 .address{
   display: flex;
   width: 100%;
-  flex-direction: column;
 }
+
+.address {}
 
 .txt_ju{
   font-size: 20px;
