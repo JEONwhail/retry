@@ -687,6 +687,14 @@ padding: 20px 0;
   width: 50%;
 }
 
+.left_place::after{
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 111px;
+  padding: 0 20px;
+}
+
 .left_place .foot_01{
   display: flex;
 }
