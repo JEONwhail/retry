@@ -5,7 +5,7 @@
   padding: 0 0 200px 0;
 }
 
-#login a img{
+img{
   display: block;
   margin: 0 auto;
 }
@@ -67,7 +67,6 @@
   font-weight: bold;
   text-align: center;
 }
-
 #login .social_login a:nth-child(2) {
   background-color: #1ece00;
   color: #fff;
@@ -79,4 +78,101 @@
 #login .social_login a:nth-child(4) {
   background-color: #fff;
   color: #000;
+}
+
+/* 회원가입페이지 */
+
+#join {
+  margin-top: 156px;
+  background-color: #080d581a;
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+#join .join_section fieldset legend {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 30px 0;
+  padding-top: 30px;
+}
+#join .join_section fieldset .join_form > div:nth-child(2) input[type=text] {
+  width: 96px;
+}
+#join .join_section fieldset .join_form .join_box {
+  margin-bottom: 20px;
+}
+#join .join_section fieldset .join_form p {
+  margin-bottom: 10px;
+}
+#join .join_section fieldset .join_form p label {
+  font-size: 18px;
+  border: none;
+}
+#join .join_section fieldset .join_form p label[for=id] {
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form p label[for=pw] {
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form p label[for=mail] {
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form p label[for=pfone] {
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form p label[for=phone_number] {
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form input {
+  border: none;
+}
+#join .join_section fieldset .join_form input[type=text] {
+  width: 300px;
+  height: 39px;
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form input[type=password] {
+  width: 300px;
+  height: 39px;
+  text-indent: 7px;
+}
+#join .join_section fieldset .join_form .warning_p {
+  font-size: 11px;
+  color: #636262;
+  line-height: 17px;
+}
+#join .join_section .join_btn a {
+  color: #0e075d;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: #ccc8c8;
+}
+#join .join_section .join_btn a:hover {
+  color: #0e075d;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+#join .join_section fieldset .join_box .country {
+  width: 300px;
+  margin-bottom: 10px;
+  height: 30px;
+}
+#join .join_section fieldset .phone_number input[type=text] {
+  width: 190px;
+  margin-bottom: 10px;
+  text-indent: 7px;
+}
+#join .join_section fieldset .phone_number label[for=phone_number] a {
+  color: #0e075d;
+  padding: 10px 0;
+  font-weight: bold;
+  text-indent: 7px;
+  background-color: #ccc8c8;
+}
+#join .join_section fieldset .phone_number label[for=phone_number] a:hover {
+  color: #0e075d;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: #fff;
 }

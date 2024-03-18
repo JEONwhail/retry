@@ -74,10 +74,10 @@
             <a href="./login.html">로그인</a>
           </li>
           <li>
-            <a href="./join.html">회원가입</a>
+            <a href="javascript:void(0)">회원가입</a>
           </li>
           <li>
-            <a href="./login.html">마이페이지</a>
+            <a href="javascript:void(0)">마이페이지</a>
           </li>
         </ul>
         <!-- 검색영역 -->
@@ -139,13 +139,13 @@
         </li>
 
         <li class="item">
-          <a href="./login.html" class="item__name">마이페이지</a>
+          <a href="javascript:void(0)" class="item__name">마이페이지</a>
           <div class="item__contents">
             <ul class="inner">
               <!-- 말을 좀 다듬어야 할듯 -->
-              <li><a href="./login.html">개인정보</a></li>
-              <li><a href="./login.html">나의 컨텐츠</a></li>
-              <li><a href="./login.html">응모한 이벤트</a></li>
+              <li><a href="javascript:void(0)">개인정보</a></li>
+              <li><a href="javascript:void(0)">나의 컨텐츠</a></li>
+              <li><a href="javascript:void(0)">응모한 이벤트</a></li>
             </ul>
           </div>
         </li>
@@ -164,37 +164,69 @@
     </div>
   </header>
 
-  <section id="login">
-    <a href="./index.html"><img src="./IMG/logo_01.png" alt=""></a>
-    <div class="login_box">
-      <form class="login_form" action="index.html" method="post">
-        <div class="id_box">
-          <input type="text" name="id" placeholder="아이디를 입력해주세요." maxlength="20">
+  
+  <section id="join">
+    <div class="join_section">
+      <fieldset>
+        <a href="./index.html"><img src="./IMG/logo_01.png" alt=""></a>
+        <div class="join_form">
+          <div class="join_box">
+            <p><label for="name">이름</label></p>
+            <input type="text" id="name" maxlength="20" placeholder="이름을 입력해주세요.">
+          </div>
+          <div class="join_box">
+            <p><label for="birth">생년월일</label></p>
+            <input type="text" id="birth1" maxlength="20" placeholder="태어난 연도">
+            <input class="birth_1" type="text" id="birth2" maxlength="20" placeholder="월">
+            <input class="birth_1" type="text" id="birth3" maxlength="20" placeholder="일">
+          </div>
+          <div class="join_box">
+            <p><label for="id">아이디</label></p>
+            <input type="text" id="id" maxlength="15" placeholder="영문과 숫자 조합으로 입력해주세요.">
+            <p class="warning_p">영문과 숫자 포함된 조합으로 15자내로 입력해주세요.</p>
+          </div>
+          <div class="join_box">
+            <p><label for="pw">비밀번호</label></p>
+            <input type="password" name="password" maxlength="20" placeholder="비밀번호를 입력해주세요.">
+            <p class="warning_p">영문,숫자,특수문자를 포함해주세요.</p>
+          </div>
+          <div class="join_box">
+            <p><label for="check">비밀번호 재확인</label></p>
+            <input type="password" name="password" maxlength="20" placeholder="비밀번호를 재입력 해주세요.">
+          </div>
+          <div class="join_box">
+            <p>
+              <span class="form">성별 : </span>
+              <input type="radio" name="gender" value="man" id="gender_01" checked="">
+              <label for="gender_01">남</label>
+              <input type="radio" name="gender" value="woman" id="gender_02">
+              <label for="gender_02">여</label>
+              <input type="radio" name="gender" value="Voiceless" id="gender_03">
+              <label for="gender_03">무성</label>
+            </p>
+          </div>
+          <div class="join_box">
+            <p><label for="phone">핸드폰 번호</label></p>
+            <select class="country" name="phone_first">
+              <option value="country1">대한민국 +82</option>
+              <option value="country1">일본 +81</option>
+            </select>
+            <div class="phone_number">
+              <input type="text" id="phone_number" placeholder="010 - 0000 - 0000">
+              <label for="phone_number"><a href="#none">인증번호 받기</a></label>
+            </div>
+            <div class="ph_ck">
+              <input type="text" id="phone_ck" maxlength="20" placeholder="인증번호를 입력해주세요.">
+            </div>
+          </div>
+          <div class="join_box">
+            <p><label for="mail">본인 확인 이메일</label></p>
+            <input type="text" id="mail" maxlength="20" placeholder="선택입력">
+          </div>
         </div>
-        <div class="password_box">
-          <input type="password" name="password" placeholder="비밀번호를 입력해주세요" maxlength="20">
-        </div>
-        <input type="submit" class="loginbtn" id="login_send" value="로그인">
-      </form>
-      <div class="login_sub_menu">
-        <a href="#none">아이디를 잊어버리셨나요?</a>
-        <span class="id_line"></span>
-        <a href="#none">비밀번호를 잊어버리셨나요?</a>
-      </div>
-      <div class="with_laon">
-        <a href="./join.html">라온하제 회원가입하러 가기</a>
-      </div>
-      <div class="social_login">
-        <p class="social_p">SNS로 라온하제를 쉽게 이용해보세요! </p>
-        <a href="#none">
-          네이버 로그인
-        </a>
-        <a href="#none">
-          카카오톡 로그인
-        </a>
-        <a href="#none">
-          APPLE 로그인
-        </a>
+      </fieldset>
+      <div class="join_btn">
+        <a href="#none">가입하기</a>
       </div>
     </div>
   </section>
