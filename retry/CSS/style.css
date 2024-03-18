@@ -338,7 +338,7 @@ header .main-menu .item:hover .item__name{
 }
 
 header .main-menu .item .item__contents{
-  background-color: #cce1ff;
+  background-color: #cfcfcc;
   position: fixed;
   width: 100%;
   left: 0;
