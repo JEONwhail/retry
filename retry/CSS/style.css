@@ -207,12 +207,8 @@ header > .inner{
 
 header > .inner > .logo{
   width: 30%;
-  height: auto;
   position: absolute;
-  height: auto;
   top: -25px;
-  bottom: 0;
-  margin: auto 0;  
   left: -25px;
 }
 
@@ -397,10 +393,37 @@ header .main-menu .item .item__contents > ul > li:hover a{
 
 .content h2{
   text-align: left;
-  padding: 30px 0;
+  padding: 30px 0 0;
   font-size: 30px;
 
 }
+/* .content_focus{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.content_focus .content_focus01{
+  background-color: yellow;
+  width: 45px;
+  height: 5px;
+  transform: rotate(60deg);
+  margin: 0 auto;
+}
+.content_focus .content_focus02{
+  background-color: yellow;
+  width: 45px;
+  height: 5px;
+  transform: rotate(90deg);
+  margin: 0 auto;
+}
+.content_focus .content_focus03{
+  background-color: yellow;
+  width: 45px;
+  height: 5px;
+  transform: rotate(-60deg);
+  margin: 0 auto;
+} */
 
 
 /* YOUTUBE */
@@ -465,6 +488,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
 .news .contenst-news{
   display: flex;
   justify-content: space-between;  
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 .news .contenst-news .left{
@@ -484,7 +508,8 @@ header .main-menu .item .item__contents > ul > li:hover a{
 }
 
 .news .contenst-news .left .left_box .main_news_box .btn{
-  
+  margin: 20px 0 0 0;
+  display: inline-block;
 }
 
 
@@ -510,6 +535,11 @@ header .main-menu .item .item__contents > ul > li:hover a{
 .news .contenst-news .right .right_box .top-news img{
   
 }
+
+.news .contenst-news .right .right_box a{
+  color: #000;
+}
+
 
 .news .contenst-news .right .right_box .bottom-news {
   display: flex;
@@ -574,7 +604,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
   color: #333;
   margin: 0 20px;
   font-size: 15px;
-  font-family: 'JSDongkang-Regular';
+  font-family: 'NEXON Lv1 Gothic OTF';s
 }
 
 
@@ -610,6 +640,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
 }
 
 .board .board-line > li .hidden_board .close_btn{
+  content: "";
   display: block;
   color: #000;
   font-family: 'JSDongkang-Regular';
@@ -643,7 +674,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
   border-bottom: solid 1px #b3b3b3;
   box-sizing: border-box;
   position: relative;
-  font-family: 'Binggrae-Bold';
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 .qna .qna_box .dl_box .question::after{
@@ -656,6 +687,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
   position: absolute;
   top: 17px;
   right: 23px;
+  content: "";
 }
 
 .qna .qna_box .dl_box .answer{
@@ -663,13 +695,14 @@ header .main-menu .item .item__contents > ul > li:hover a{
   display: none;
   padding: 34px 0;
   font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: bold;
   background-color: #7bade029;
 }
 
 /* FOOTER */
 #footer{
   background-color: #f6f5f0;
-  padding: 30px 0;
+  padding: 20px 0 0;
 }
 
 .footer_cover{
@@ -681,7 +714,16 @@ header .main-menu .item .item__contents > ul > li:hover a{
 }
 
 .customer{
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
+
+.customer::after{
+  content: "";
+  display: inline-block;
+  border: 0.5px solid #d7d7d7;
+  width: 100%;
+  margin: 10px 0;
+} 
 
 .customer_full{
   display: flex;
@@ -693,12 +735,13 @@ header .main-menu .item .item__contents > ul > li:hover a{
 
 .customer .big{
   font-weight: bold;
-  font-size: 25px;
-  padding-bottom: 20px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 .customer .regul{
-  font-size: 20px;
+  font-size: 15px;
 }
 .customer >span >p{
 }
@@ -706,14 +749,24 @@ header .main-menu .item .item__contents > ul > li:hover a{
 
 .barand_about{
   padding:30px 0;
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 .footer_right{
   width: 70%;
+  margin-top: 26px;
 }
 
 .footer_nav{
-  padding: 30px 0;
+  padding: 30px 0 0;
+}
+
+.footer_nav::after{
+  content: "";
+  display: inline-block;
+  border: 0.5px solid #d7d7d7;
+  width: 100%;
+  margin: 10px 0;
 }
 
 .footer_nav > ul{
@@ -735,11 +788,10 @@ header .main-menu .item .item__contents > ul > li:hover a{
 
 .footer_sub{
   font-family: 'NEXON Lv1 Gothic OTF';
-  margin-top: 30px;
   }
 
 .footer_sub .txt_ju{
-  font-size: 30px;
+  font-size: 20px;
 }
 
 
@@ -754,6 +806,9 @@ header .main-menu .item .item__contents > ul > li:hover a{
 .footer_sub .footer_left .address01 > ul{
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
 }
 
+.footer_sub .footer_left .address01 > ul > li{
+  font-size: 10px;
+  padding: 2px 20px 0 0;
+}
