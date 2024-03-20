@@ -847,15 +847,103 @@ header .main-menu .item {
   justify-content: center;
 }
 
-.youtube .youtube__cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 820px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+.content{
+  width: 100%;
 }
 
+.content h2{
+  text-align: center;
+} 
+
+.youtube {
+  display: none;
+}
+
+.news{
+  width: 100%;
+  background-color: #dfebfd;
+  padding-bottom: 30px;
+}
+
+.news h2{
+  text-align: center;
+}
+
+.news .contenst-news .left{
+  width: 100%;
+}
+
+.news .contenst-news .left .left_box{
+  width: 100%;
+}
+
+.news .contenst-news .left .left_box .main_news_box img{
+  margin: 0 auto;
+}
+
+.news .contenst-news .left .left_box .main_news_box a{
+  text-align: center;
+}
+
+.news .contenst-news .left .left_box .main_news_box a h3{
+  font-size: 25px;
+}
+
+.news .contenst-news .left .left_box .main_news_box a p{
+  font-size: 20px;
+}
+
+.news .contenst-news .left .left_box .main_news_box .btn{
+  display: none;
+}
+
+.news .right{
+  display: none;
+}
+
+.board h2{
+  text-align: center;
+}
+
+.board .board-line{
+  flex-wrap: wrap;
+}
+ 
+.board .board-line li{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.board .board-line li a span,
+.board .board-line li a p{
+  text-align: center;
+}
+
+.board .board-line li a span{
+  font-size: 22px;
+}
+
+.board .board-line li a:nth-child(2){
+  font-weight: bold;
+  font-size: 18px;
+}
+.board .board-line li a p{
+  font-size: 16px;
+}
+
+.board .board-line .hidden_board{
+  /* 없어져야 함ㅜㅜ */
+}
+
+.qna h2{
+  text-align: center;
+}
+
+.qna .dl_box{
+  text-align: center;
+  font-size: 25px;
+  line-height: 70px;
+}
 
 #footer .footer_left .barand_about p{
   font-size: 13px;
