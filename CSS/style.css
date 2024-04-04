@@ -624,6 +624,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
 #footer{
   background-color: #f6f5f0;
   padding: 20px 0 0;
+  position: relative;
 }
 
 .footer_cover{
