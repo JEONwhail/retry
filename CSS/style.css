@@ -49,6 +49,25 @@ img{
   margin: 0 auto;
   position: relative;
 }
+/* #3999BF
+#84C9D9
+#F2E085
+#F2CA52
+#F2E3B3 */
+
+.loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.3s;
+}
 
 /*  background_effect-BUBBLE */
 .bubble{
@@ -117,7 +136,7 @@ img{
 
 /* HEADER */
 header {
-  background-color: #f6f5f0;
+  background-color: #84C9D9;
   border-bottom: 1px solid #c8c8c8;
   width: 100%;
   position: fixed;
@@ -126,7 +145,6 @@ header {
 }
 
 header > .inner{
-  /* background-color: #aefff8; */
   height: 155px;
 }
 
@@ -167,10 +185,9 @@ header .sub-menu .menu li a {
 }
 
 header .sub-menu .menu li a:hover{
-  color: #0b0980;
+  color: #F2E085;
   font-weight: bold;
 }
-
 
 /* 메뉴 아이템 사이 구분선 */
 header .sub-menu .menu li::after{
@@ -250,15 +267,15 @@ header .main-menu .item .item__name{
 }
 
 header .main-menu .item:hover .item__name{
-  background-color: #87a9f3;
-  color: #000000;
+  background-color: #3999BF;
+  color: #F2E085;
   font-weight: bold;
   border-radius: 6px 6px 0 0; 
 
 }
 
 header .main-menu .item .item__contents{
-  background-color: #cfcfcc;
+  background-color: #aceaee;
   position: fixed;
   width: 100%;
   left: 0;
@@ -290,7 +307,7 @@ header .main-menu .item .item__contents > ul > li > a{
 }
 
 header .main-menu .item .item__contents > ul > li:hover a{
-  color: #000000;
+  color: #F2E085;
   font-weight: bold;
 }
 
@@ -303,53 +320,18 @@ header .main-menu .item .item__contents > ul > li:hover a{
 /* MAIN BANNER */
 .main_banner{
   margin-top: 156px;
-  /* background-image: url("https://via.placeholder.com/1280x600"); */
   background-position: center;
-  height: 600px;
+  height: 700px;
 }
-
-
 
 /* CONTENT */
-.content{
-
-
-}
+.content{}
 
 .content h2{
   text-align: left;
   padding: 30px 0 0;
   font-size: 30px;
-
 }
-/* .content_focus{
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
-}
-
-.content_focus .content_focus01{
-  background-color: yellow;
-  width: 45px;
-  height: 5px;
-  transform: rotate(60deg);
-  margin: 0 auto;
-}
-.content_focus .content_focus02{
-  background-color: yellow;
-  width: 45px;
-  height: 5px;
-  transform: rotate(90deg);
-  margin: 0 auto;
-}
-.content_focus .content_focus03{
-  background-color: yellow;
-  width: 45px;
-  height: 5px;
-  transform: rotate(-60deg);
-  margin: 0 auto;
-} */
-
 
 /* YOUTUBE */
 .youtube{
@@ -535,7 +517,7 @@ header .main-menu .item .item__contents > ul > li:hover a{
   color: #333;
   margin: 0 20px;
   font-size: 15px;
-  font-family: 'NEXON Lv1 Gothic OTF';s
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 
